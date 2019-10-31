@@ -8,8 +8,8 @@ turns out there isn't much
 
 ---
 
-the java version comes from (here)[https://rosettacode.org/wiki/MD5/Implementation#Java]
+the java version comes from [https://rosettacode.org/wiki/MD5/Implementation#Java](here)
 
-the kotlin version was made with (this)[https://try.kotlinlang.org/#/Kotlin%20Koans/Introduction/Java%20to%20Kotlin%20conversion/Task.kt]
+the kotlin version was made with [https://try.kotlinlang.org/#/Kotlin%20Koans/Introduction/Java%20to%20Kotlin%20conversion/Task.kt](this)
 
 and the scala version was translated from the java one by hand

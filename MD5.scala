@@ -2,7 +2,7 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.IntBuffer
 
-object MD5 extends App
+object MD5S extends App
 {
   val INIT_A: Int = 0x67452301
   val INIT_B: Int = 0xEFCDAB89
@@ -95,7 +95,15 @@ object MD5 extends App
     return sb.toString()
   }
  
-  val testStrings: Array[String] = Array("", "a", "abc", "message digest", "abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", "12345678901234567890123456789012345678901234567890123456789012345678901234567890")
-  for (s <- testStrings)
-    System.out.println("0x" + toHexString(computeMD5(s.getBytes())) + " <== \"" + s + "\"")
+  var i = 0
+
+  while (true) {
+    computeMD5("".getBytes())
+
+    if (i % 100000 == 0) {
+      println(i)
+    }
+
+    i += 1
+  }
 }

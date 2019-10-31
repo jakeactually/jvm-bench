@@ -106,10 +106,17 @@ class MD5
  
   public static void main(String[] args)
   {
-    String[] testStrings = { "", "a", "abc", "message digest", "abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", "12345678901234567890123456789012345678901234567890123456789012345678901234567890" };
-    for (String s : testStrings)
-      System.out.println("0x" + toHexString(computeMD5(s.getBytes())) + " <== \"" + s + "\"");
-    return;
+    int i = 0;
+
+    for (;;) {
+      computeMD5("".getBytes());
+
+      if (i % 100000 == 0) {
+        System.out.println(i);
+      }
+
+      i++;
+    }
   }
  
 }

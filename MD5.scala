@@ -79,7 +79,7 @@ object MD5S extends App
     }
  
     val md5: ByteBuffer = ByteBuffer.allocate(16).order(ByteOrder.LITTLE_ENDIAN)
-    for (n <- Seq(a, b, c, d))
+    for (n <- Array(a, b, c, d))
     {
       md5.putInt(n)
     }
